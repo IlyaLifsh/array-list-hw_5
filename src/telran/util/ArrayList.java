@@ -1,6 +1,6 @@
 package telran.util;
 //HW_5 Ilya_L
-
+ 
 import java.util.Arrays;
 
 public class ArrayList<T> implements List<T> {
