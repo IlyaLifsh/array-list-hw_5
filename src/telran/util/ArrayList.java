@@ -31,9 +31,18 @@ public class ArrayList<T> implements List<T> {
 	}
 	@Override
 	public boolean add(int index, T element) {
-		// TODO Auto-generated method stub
+		if (index>size || index<0) {
 		return false;
 	}
+		if (size ==array.length) {
+			allocate();
+		}
+		System.arraycopy(array, index, array, index+1, size-index);
+		size=size+1;
+		array[index]=element;
+		return true;
+		}
+	
 
 	@Override
 	public int size() {
