@@ -62,10 +62,9 @@ public class ArrayList<T> implements List<T> {
 	}
 	@Override
 	public T remove(int index) {
-		// TODO Auto-generated method stub
 		if (!isValidIndex(index)) {
 			return null;
-				}
+		}
 		T resValue = array[index];
 		System.arraycopy(array, index+1, array, index, size-index-1);
 		size = size-1;
